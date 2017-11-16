@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secret Code JS</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Secret Code JS</h1>
+
+        <div class="col-lg-6">
+          <h2>????</h2>
+
+
+          <form class="form-inline" action="index.html" method="post">
+          <label for="">Código</label>
+          <input type="number" autofocus placeholder="Ingresa el codigo" class="form-control" name="" value="" id="intento">
+          <button type="button" class="btn btn-default" id="btn-intento" name="button">Probar codigo</button>
+         </form>
+
+          <div id="intentos">
+
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <h2>Objetivo</h2>
+          <p>Debes descubrir el código secreto de 4 digitos.</p>
+          <h2>Reglas</h2>
+          <ul>
+            <li>Ingresa en la caja de texto un número de 4 cifras, este puede contener numeros de 0-9</li>
+            <li>Cada número puede repetirse</li>
+            <li>Para ganar debes encontrar se secuencia de 4 números</li>
+            <li>Solo tienes 10 intentos para lograrlo.</li>
+          </ul>
+          <h2>Pistas</h2>
+          <ul>
+            <li>Un <span class="fa fa-times" aria-hidden="true"></span> significa que el numero no pertenece al código.</li>
+            <li>Un <span class="fa fa-check" aria-hidden="true"></span> significa que encontraste un número y esta en la posicion correcta.</li>
+            <li>Un <span class="fa fa-arrows-h" aria-hidden="true"></span> significa que el numero pertenece al codigo, pero no esta en la posicion correcta</li>
+            <li>Si al ingresar 1234 y obtienes este resultado <span class="fa fa-check" aria-hidden="true"></span><span class="fa fa-times" aria-hidden="true"></span> <span class="fa fa-arrows-h" aria-hidden="true"></span><span class="fa fa-times" aria-hidden="true"></span> significa que:</li>
+              <ul>
+                <li>El 1 existe y esta en la posicion correcta (el codigo secreto inicia con un 1)</li>
+                <li>El 2 y 4 no son parte del codigo</li>
+                <li>El 3 si es parte del código, pero no esta en la posicion 3, quiza en la posicion 2 o 4</li>
+              </ul>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>
